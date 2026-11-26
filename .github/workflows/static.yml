@@ -1,0 +1,10 @@
+name: Legacy Static Pages (disabled)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This legacy deployment is disabled. The Vite site is deployed by pages.yml."
