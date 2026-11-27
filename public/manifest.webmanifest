@@ -5,8 +5,7 @@
   "description": "A family-supported curiosity lab with example prompts.",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display": "browser",
   "background_color": "#050608",
   "theme_color": "#050608",
   "icons": [
