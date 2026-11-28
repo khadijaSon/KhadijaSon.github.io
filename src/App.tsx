@@ -163,7 +163,7 @@ function HomePage() {
         <div className="hero-content">
           <p className="eyebrow">CURIOSITY LAB · BUILDING · PUZZLES</p>
           <div className="hero-heading-row">
-            <h1>Welcome to my <span className="gradient-text">curiosity lab.</span></h1>
+            <h1>Hi, I’m <span>the creator behind Curiosity Lab.</span><br /><span className="gradient-text">I explore curious ideas.</span></h1>
             <button
               className="hero-avatar-button"
               type="button"
@@ -181,6 +181,7 @@ function HomePage() {
           <div className="hero-actions">
             <a className="primary-button" href="/about.html">About this page <ArrowUpRight size={16} /></a>
             <a className="secondary-button" href={PARENT_SITE_URL} target="_blank" rel="noreferrer"><House size={16} /> Family website</a>
+            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Ask · explore · make</p>
         </div>
