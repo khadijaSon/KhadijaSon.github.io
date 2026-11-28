@@ -54,18 +54,18 @@ function EcoHeader({
         <button className="icon-button toggle-button" type="button" onClick={onToggleLeft} aria-label="Toggle navigation" aria-expanded={leftOpen} title="Toggle navigation (Ctrl+B)">
           {leftOpen ? <PanelLeftClose size={19} /> : <PanelLeftOpen size={19} />}
         </button>
-        <a className="brand" href="/" aria-label="Curiosity Lab home"><span className="brand-mark">K</span><span className="brand-label">Curiosity Lab</span></a>
+        <a className="brand" href="/" aria-label="Curiosity Lab home"><span className="brand-mark">ECO</span><span className="brand-label">Curiosity Lab</span></a>
         <nav className="header-nav" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/timeline.html">Project ideas</a>
           <a href="/#ideas">Curiosity lab</a>
-          <a href={PUBLIC_PLAYLIST.length ? '/#listen' : '/#listen-section'}>Listen</a>
         </nav>
       </div>
       <div className="header-side header-side-right">
         <a className="header-link github-link" href={PARENT_SITE_URL} target="_blank" rel="noreferrer" aria-label="Visit the family website"><House size={16} /><span>Family site</span></a>
-        <a className="icon-button toggle-button" href={PARENT_REPOSITORY_URL} target="_blank" rel="noreferrer" aria-label="Open the parent-managed project repository" title="Family project"><ArrowUpRight size={18} /></a>
+        <a className="header-link github-link" href={PARENT_REPOSITORY_URL} target="_blank" rel="noreferrer" aria-label="Open the parent-managed Git repository"><Github size={16} /><span>Git repo</span></a>
+        <a className="header-link github-link" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer" aria-label="Open the ECO ecosystem repository" title="ECO repository"><span className="brand-mark" aria-hidden="true">ECO</span><span>ECO repo</span></a>
         <button className="icon-button toggle-button right-toggle" type="button" onClick={onToggleRight} aria-label="Toggle right sidebar" aria-expanded={rightOpen} title="Toggle right sidebar (Ctrl+M)">
           {rightOpen ? <PanelRightClose size={19} /> : <PanelRightOpen size={19} />}
         </button>
@@ -182,7 +182,10 @@ function HomePage() {
           <div className="hero-actions">
             <a className="primary-button" href="/about.html">About this page <ArrowUpRight size={16} /></a>
             <a className="secondary-button" href={PARENT_SITE_URL} target="_blank" rel="noreferrer"><House size={16} /> Family website</a>
-            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
+            <a className="secondary-button" href="#listen" onClick={(event) => {
+              event.preventDefault();
+              window.dispatchEvent(new Event('eco:open-music-library'));
+            }}><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Ask · explore · make</p>
         </div>
