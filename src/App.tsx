@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import profileAvatar from '../assets/KHADIJASON.png';
 import MusicPlayer from './components/MusicPlayer';
+import ContributionWeekEmbed from './components/ContributionWeekEmbed';
 import PwaInstallButton from './components/PwaInstallButton';
 import TimelinePage from './TimelinePage';
 import { PUBLIC_PLAYLIST } from './music/playlist';
@@ -186,6 +187,7 @@ function HomePage() {
           <p className="hero-caption">Ask · explore · make</p>
         </div>
       </section>
+      <ContributionWeekEmbed site="khadijason" />
       {isAvatarOpen && (
         <div
           className="avatar-lightbox"
